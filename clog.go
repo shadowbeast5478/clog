@@ -30,21 +30,21 @@ func log(color int, level string, formating string, args... interface{}) {
         filename = filepath.Base(filename)
     }
 
-    fmt.Printf("\033[0;40;%dm %s \033[0m\033[0;36;44m%s:%d # %s:\033[0m %s\n", color, level, filename, line, funcname, fmt.Sprintf(formating, args...))
+    fmt.Printf("\033[0;40;%dm %s \033[0m\033[1;44;33m%s:%d # %s:\033[0m %s\n", color, level, filename, line, funcname, fmt.Sprintf(formating, args...))
 }
 
 func Info(formating string, args... interface{}) {
-    log(green, "[INFO] ", formating, args...)
+    log(green, "[INFO]  ", formating, args...)
 }
 
 func Debug(formating string, args... interface{}) {
-    log(blue, "[DEBUG]", formating, args...)
+    log(blue, "[DEBUG] ", formating, args...)
 }
 
 func Warning(formating string, args... interface{}) {
-    log(green, "[WARING]", formating, args...)
+    log(yellow, "[WARING]", formating, args...)
 }
 
 func Error(formating string, args... interface{}) {
-    log(red, "[ERROR]", formating, args...)
+    log(red, "[ERROR] ", formating, args...)
 }
