@@ -18,7 +18,6 @@ const (
     white
 )
 
-
 func log(color int, level string, formating string, args... interface{}) {
     filename, line, funcname := "", 0, ""
     pc, filename, line, ok := runtime.Caller(3)
@@ -34,11 +33,11 @@ func log(color int, level string, formating string, args... interface{}) {
 }
 
 func Info(formating string, args... interface{}) {
-    log(green, "[INFO]  ", formating, args...)
+    log(green, "[INFO]   ", formating, args...)
 }
 
 func Debug(formating string, args... interface{}) {
-    log(blue, "[DEBUG] ", formating, args...)
+    log(blue, "[DEBUG]  ", formating, args...)
 }
 
 func Warning(formating string, args... interface{}) {
@@ -46,5 +45,5 @@ func Warning(formating string, args... interface{}) {
 }
 
 func Error(formating string, args... interface{}) {
-    log(red, "[ERROR] ", formating, args...)
+    log(red, "[ERROR]  ", formating, args...)
 }
