@@ -41,7 +41,7 @@ func Debug(formating string, args... interface{}) {
     log(blue, "[DEBUG]", formating, args...)
 }
 
-func Waring(formating string, args... interface{}) {
+func Warning(formating string, args... interface{}) {
     log(green, "[WARING]", formating, args...)
 }
 
