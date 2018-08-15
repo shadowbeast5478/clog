@@ -21,7 +21,7 @@ const (
 
 func log(color int, level string, formating string, args... interface{}) {
     filename, line, funcname := "", 0, ""
-    pc, filename, line, ok := runtime.Caller(2)
+    pc, filename, line, ok := runtime.Caller(3)
     if ok {
         funcname = runtime.FuncForPC(pc).Name()
         funcname = filepath.Ext(funcname)
@@ -30,7 +30,7 @@ func log(color int, level string, formating string, args... interface{}) {
         filename = filepath.Base(filename)
     }
 
-    fmt.Printf("\033[0;40;%dm %s \033[0m\033[1;44;33m%s:%d # %s:\033[0m %s\n", color, level, filename, line, funcname, fmt.Sprintf(formating, args...))
+    fmt.Printf("\033[0;40;%dm %s \033[0m\033[1;44;32m%s:%d # %s:\033[0m %s\n", color, level, filename, line, funcname, fmt.Sprintf(formating, args...))
 }
 
 func Info(formating string, args... interface{}) {
