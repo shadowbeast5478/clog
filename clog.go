@@ -38,7 +38,11 @@ func Info(formating string, args... interface{}) {
 }
 
 func Debug(formating string, args... interface{}) {
-    log(yellow, "[DEBUG]", formating, args...)
+    log(blue, "[DEBUG]", formating, args...)
+}
+
+func Waring(formating string, args... interface{}) {
+    log(green, "[WARING]", formating, args...)
 }
 
 func Error(formating string, args... interface{}) {
