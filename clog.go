@@ -20,7 +20,7 @@ const (
 
 func log(color int, level string, formating string, args... interface{}) {
     filename, line, funcname := "", 0, ""
-    pc, filename, line, ok := runtime.Caller(3)
+    pc, filename, line, ok := runtime.Caller(2)
     if ok {
         funcname = runtime.FuncForPC(pc).Name()
         funcname = filepath.Ext(funcname)
