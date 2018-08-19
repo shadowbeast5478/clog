@@ -11,7 +11,6 @@
 $ go get github.com/shadowbeast5478/clog
 ```
 ## Library
-## Library
 - ```clog.Info()``` ：Print greed prefix word ```[INFO]```
 - ```clog.Debug()``` ：Print blue prefix word ```[DEBUG]```
 - ```clog.Warning()```：Print yellow prefix word ```[Warning]```
